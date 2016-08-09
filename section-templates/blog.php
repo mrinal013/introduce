@@ -1,0 +1,53 @@
+<?php
+
+$section = get_the_ID();
+
+$general_data = get_post_meta( $section, "common_settings", true );
+$team_data  = get_post_meta( $section, "team_settings", true );
+
+
+
+$title = $general_data['title'];
+$subtitle = $general_data['subtitle'];
+
+// WP_Query arguments
+$args = array (
+	'post_type'     => array( 'post' ),
+    'post_status'   => 'publish',
+    //'posts_per_page'=> 5,
+);
+
+// The Query
+$posts = new WP_Query( $args );
+
+// if( $posts->have_posts() ) :
+//     while( $posts->have_posts() ) : $posts->the_post();
+//     the_title();
+// endwhile;
+// endif;
+
+?>
+<section id="blog">
+    <div class="container-fluid">
+        <p class="title"><?php echo $title; ?></p>
+        <p class="subtitle"><?php echo $subtitle; ?></p>
+        <div class="row">
+        <?php
+        if( $posts->have_posts() ) :
+            while( $posts->have_posts() ) : $posts->the_post();
+        ?>
+            <div class="col-sm-4 col-xs-6">
+                <img class="post-feature-image" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
+                <div class="post">
+                    <p class="cat">Photography<?php //wp_list_categories(); ?></p>
+                    <p class="post-title"><?php the_title(); ?></p>
+                    <p class="post-excerpt"><?php the_excerpt(); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
+                </div>
+
+            </div>
+        <?php endwhile; endif; ?>
+        </div>
+    </div>
+
+</section>
