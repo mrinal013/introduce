@@ -224,8 +224,8 @@ function wpdocs_theme_add_editor_styles() {
 }
 add_action( 'after_setup_theme', 'wpdocs_theme_add_editor_styles' );
 
-//require_once ( get_template_directory(). "/codestar/cs-framework.php" );
-get_template_part( 'codestar/cs-framework' );
+include_once ( get_template_directory(). "/codestar/cs-framework.php" );
+//get_template_part( 'codestar/cs-framework' );
 
 get_template_part( 'inc/metaboxes/metaboxes' );
 

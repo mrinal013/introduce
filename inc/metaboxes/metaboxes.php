@@ -8,49 +8,49 @@ function codestar_init(){
 }
 add_action("init","codestar_init",999);
 
-get_template_part( 'inc/metaboxes/class.sectiontypes.php' );
+get_template_part( 'inc/metaboxes/class.sectiontypes' );
 
-function introduce_section_types($metaboxes){
-    $metaboxes[]      = array(
-        'id'            => 'section_types',
-        'title'         => 'Section Types',
-        'post_type'     => 'section',
-        'context'       => 'side',
-        'priority'      => 'high',
-        'sections'      => array(
-
-            array(
-                'name'      => 'introduce_section',
-                'icon'      => 'fa fa-wifi',
-                'fields'    => array(
-
-                    array(
-                        'id'    	=> 'section_type',
-                        'type'  	=> 'radio',
-                        'options' 	=> array(
-                            'banner'   		=> 'Banner',
-                            'feature'  		=> 'Feature',
-                            'portfolio'    	=> 'Porfolio',
-                            'slider'    	=> 'Slider',
-							'team'    	    => 'Team',
-                            'contact'    	=> 'Contact',
-							'blog'    		=> 'Blog',
-							'service'    	=> 'Service',
-							'purchage'    	=> 'Purchage',
-							'summary'   	=> 'Summary',
-							'skil'    		=> 'Skil',
-							'review'    	=> 'Review',
-							'price'    	    => 'Price',
-							'partner'    	=> 'Partner',
-                        ),
-                    ),
-                ),
-            ),
-        ),
-    );
-    return $metaboxes;
-}
-add_filter("cs_metabox_options","introduce_section_types");
+// function introduce_section_types($metaboxes){
+//     $metaboxes[]      = array(
+//         'id'            => 'section_types',
+//         'title'         => 'Section Types',
+//         'post_type'     => 'section',
+//         'context'       => 'side',
+//         'priority'      => 'high',
+//         'sections'      => array(
+//
+//             array(
+//                 'name'      => 'introduce_section',
+//                 'icon'      => 'fa fa-wifi',
+//                 'fields'    => array(
+//
+//                     array(
+//                         'id'    	=> 'section_type',
+//                         'type'  	=> 'radio',
+//                         'options' 	=> array(
+//                             'banner'   		=> 'Banner',
+//                             'feature'  		=> 'Feature',
+//                             'portfolio'    	=> 'Porfolio',
+//                             'slider'    	=> 'Slider',
+// 							'team'    	    => 'Team',
+//                             'contact'    	=> 'Contact',
+// 							'blog'    		=> 'Blog',
+// 							'service'    	=> 'Service',
+// 							'purchage'    	=> 'Purchage',
+// 							'summary'   	=> 'Summary',
+// 							'skil'    		=> 'Skil',
+// 							'review'    	=> 'Review',
+// 							'price'    	    => 'Price',
+// 							'partner'    	=> 'Partner',
+//                         ),
+//                     ),
+//                 ),
+//             ),
+//         ),
+//     );
+//     return $metaboxes;
+// }
+// add_filter("cs_metabox_options","introduce_section_types");
 
 function introduce_general_settings($metaboxes){
     $metaboxes[]      = array(
