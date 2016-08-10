@@ -1,5 +1,9 @@
 <?php
 
+/*
+* SectionTypes class
+*/
+
 class SectionTypes {
 
     public function __construct() {
