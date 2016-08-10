@@ -14,8 +14,6 @@ $subtitle = $general_data['subtitle'];
 $section_background = $general_data['section_background'];
 
 $button_setting = $banner_data['button_setting'];
-
-
 ?>
 <section id="welcome" class="jumbotron" style="background-image: url(<?php echo $section_background; ?>)">
     <div class="container" >
@@ -26,7 +24,7 @@ $button_setting = $banner_data['button_setting'];
 
             foreach($button_setting as $button ) { ?>
                 <a href="<?php echo $button['button_url']; ?>" class="btn btn-lg btn-primary"><?php echo $button['button_title']; ?></a>
-            <?php } ?>
+            <?php  } ?>
 
         </div>
     </div>

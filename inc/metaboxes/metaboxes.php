@@ -1,5 +1,11 @@
 <?php
 
+add_action("init","codestar_init",999);
+function codestar_init(){
+    $options = array();
+    CSFramework_Metabox::instance($options);
+}
+
 
 include_once get_template_directory() . '/inc/metaboxes/class/class.sectiontypes.php';
 

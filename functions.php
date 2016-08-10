@@ -180,6 +180,21 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+* WP Bootstrap Navwalker class include
+*/
+require ( get_template_directory(). "/inc/wp_bootstrap_navwalker.php" );
+
+/**
+* Codestar framework include
+*/
+require ( get_template_directory(). "/codestar/cs-framework.php" );
+
+/**
 * Introduce functions
 */
 require get_template_directory() . '/inc/introduce-functions.php';
+
+/*
+* metaboxes for introduce theme
+*/
+require ( get_template_directory(). "/inc/metaboxes/metaboxes.php" );

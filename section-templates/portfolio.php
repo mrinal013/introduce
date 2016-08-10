@@ -4,9 +4,9 @@ $section = get_the_ID();
 $general_data = get_post_meta( $section, "common_settings", true );
 $portfolio_data  = get_post_meta( $section, "portfolio_settings", true );
 
-echo "<pre>";
-print_r($portfolio_data);
-echo "</pre>";
+// echo "<pre>";
+// print_r($portfolio_data);
+// echo "</pre>";
 
 ?>
 
