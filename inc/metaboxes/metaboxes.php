@@ -1,14 +1,8 @@
 <?php
 
+//get_template_part( 'inc/metaboxes/class.sectiontypes' );
 
-
-function codestar_init(){
-    $options = array();
-    CSFramework_Metabox::instance($options);
-}
-add_action("init","codestar_init",999);
-
-get_template_part( 'inc/metaboxes/class.sectiontypes' );
+include_once get_template_directory() . '/inc/metaboxes/class.sectiontypes.php';
 
 // function introduce_section_types($metaboxes){
 //     $metaboxes[]      = array(
