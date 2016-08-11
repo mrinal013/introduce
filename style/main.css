@@ -164,7 +164,6 @@
 }
 @media (max-width: 991px) {
   #welcome {
-    background: #411234 url(../img/welcome.jpeg) center center no-repeat;
     background-size: cover;
   }
 }
@@ -374,7 +373,6 @@
   border-color: #b3b3b3;
 }
 #purchage {
-  background: #ff0000 url("../img/wood.jpg") no-repeat center;
   background-size: cover;
 }
 #purchage .container {
@@ -417,7 +415,7 @@
 }
 #skil {
   min-height: 500px;
-  background: #00bcd4 url(../img/skil.png) no-repeat center right 5%;
+  background: #00bcd4 no-repeat center right 5%;
 }
 #skil .row {
   margin: 50px 0px;
