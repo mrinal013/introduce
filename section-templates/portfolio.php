@@ -16,6 +16,7 @@ if( $portfolies->have_posts() ) :
         $portfolies->the_post();
         $tags = wp_get_object_terms( get_the_ID(), 'portfoio_type' );
         foreach( $tags as $tag ) {
+            if( !in_array( $tag->name, $types ) )
             $types[] = $tag->name;
         }
         echo "<br/>";
