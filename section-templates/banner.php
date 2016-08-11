@@ -13,19 +13,25 @@ $title = $general_data['title'];
 $subtitle = $general_data['subtitle'];
 $section_background = $general_data['section_background'];
 
-//$button_setting = $banner_data['button_setting'];
+$button_setting = $banner_data['button_setting'];
 
 // echo "<pre>";
 // print_r($button_setting);
 // echo "</pre>";
 ?>
-<!-- <section id="welcome" class="jumbotron">
-    <div class="container">
+<section id="welcome" class="jumbotron" style="background-image: url(<?php echo $section_background; ?>)">
+    <div class="container" >
         <div class="welcome-message">
-            <h1>Transform your thinking</h1>
-            <p>Quick Install and easy to use.</p>
-            <a href="#" class="btn btn-lg btn-primary">Get Theme Now</a>
+            <h1><?php echo $title; ?></h1>
+            <p><?php echo $subtitle; ?></p>
+            <?php
+
+            //if( is_array( $button_setting ) || is_object( $button_setting ) ) :
+
+            foreach($button_setting as $button ) : ?>
+                <a href="<?php echo $button['button_url']; ?>" class="btn btn-lg btn-primary"><?php echo $button['button_title']; ?></a>
+            <?php  endforeach; //endif; ?>
+
         </div>
     </div>
-</section> -->
-<h1>Hello</h1>
+</section>
