@@ -47,3 +47,21 @@ function wpdocs_theme_add_editor_styles() {
     $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:300,400,700' );
     add_editor_style( $font_url );
 }
+
+/*
+* Register a tag box in portfolio cpt
+*/
+add_action( 'init', 'create_book_tax' );
+
+function create_book_tax() {
+	register_taxonomy(
+		'portfoio_type',
+		'portfolio',
+		array(
+			'label' => __( 'Type' ),
+			'rewrite' => array( 'slug' => 'portfoio_type' ),
+			'hierarchical' => false,
+            'update_count_callback' => '_update_post_term_count',
+		)
+	);
+}
