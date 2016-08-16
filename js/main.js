@@ -36,7 +36,7 @@
         });
     });
 
-    $(".search").click(function(){
+    $(".search").on( "click", function(){
         $(".search-wrapper").slideToggle( "slow" );
         //alert("Hello");
     });
@@ -54,12 +54,14 @@
 
     $(".clearer").hide($(this).prev('input').val());
 
-    $(".clearer").click(function () {
+    $(".clearer").on( "click", function () {
       $(this).prev('input.form-control').val('').focus();
       $(this).hide();
     });
 
-    $("#searchclear").click(function(){
+    $("#searchclear").on( "click", function(){
         $("#searchinput").val('');
     });
+
+
 });

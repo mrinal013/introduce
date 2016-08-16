@@ -61,6 +61,9 @@ function section_mb_filter(){
         } else if("blog"==$section_type){
 			require_once get_template_directory() . '/inc/metaboxes/class/class.blog.php';
 			new Blog();
+        } else if("slider"==$section_type){
+			require_once get_template_directory() . '/inc/metaboxes/class/class.blog.php';
+			new Blog();
         }
     }
 }

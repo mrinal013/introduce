@@ -14,27 +14,21 @@ $subtitle = $general_data['subtitle'];
 $args = array (
 	'post_type'     => array( 'post' ),
     'post_status'   => 'publish',
-    //'posts_per_page'=> 5,
+    'posts_per_page'=> 5,
 );
 
 // The Query
-$posts = new WP_Query( $args );
-
-// if( $posts->have_posts() ) :
-//     while( $posts->have_posts() ) : $posts->the_post();
-//     the_title();
-// endwhile;
-// endif;
-
+$the_query = new WP_Query( $args );
 ?>
+
 <section id="blog">
     <div class="container-fluid">
         <p class="title"><?php echo $title; ?></p>
         <p class="subtitle"><?php echo $subtitle; ?></p>
         <div class="row">
         <?php
-        if( $posts->have_posts() ) :
-            while( $posts->have_posts() ) : $posts->the_post();
+        if( $the_query->have_posts() ) :
+            while( $the_query->have_posts() ) : $the_query->the_post();
         ?>
             <div class="col-sm-4 col-xs-6">
                 <img class="post-feature-image" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
@@ -46,7 +40,9 @@ $posts = new WP_Query( $args );
                 </div>
 
             </div>
-        <?php endwhile; endif; ?>
+        <?php endwhile; endif;
+		/* Restore original Post Data */
+	wp_reset_postdata(); ?>
         </div>
     </div>
 

@@ -21,37 +21,37 @@
 				<p><?php echo esc_html( get_theme_mod('introduce_footer_description') ); ?></p>
 				<div class="social">
 				<?php if( get_theme_mod('footer_facebook') ) : ?>
-					<a href="#" class="fa-stack fa-lg">
+					<a href="<?php echo get_theme_mod('footer_facebook'); ?>" class="fa-stack fa-lg">
 						<i class="fa fa-circle fa-stack-2x"></i>
 						<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 					</a>
 				<?php endif; ?>
 				<?php if( get_theme_mod('footer_twitter') ) : ?>
-					<a href="#" class="fa-stack fa-lg">
+					<a href="<?php echo get_theme_mod('footer_twitter'); ?>" class="fa-stack fa-lg">
 						<i class="fa fa-circle fa-stack-2x"></i>
 						<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 					</a>
 				<?php endif; ?>
 				<?php if( get_theme_mod('footer_instagram') ) : ?>
-					<a href="#" class="fa-stack fa-lg">
+					<a href="<?php echo get_theme_mod('footer_instagram'); ?>" class="fa-stack fa-lg">
 						<i class="fa fa-circle fa-stack-2x"></i>
 						<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
 					</a>
 				<?php endif; ?>
 				<?php if( get_theme_mod('footer_dribbble') ) : ?>
-					<a href="#" class="fa-stack fa-lg">
+					<a href="<?php echo get_theme_mod('footer_dribbble'); ?>" class="fa-stack fa-lg">
 						<i class="fa fa-circle fa-stack-2x"></i>
 						<i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
 					</a>
 				<?php endif; ?>
 				<?php if( get_theme_mod('footer_pinterest') ) : ?>
-					<a href="#" class="fa-stack fa-lg">
+					<a href="<?php echo get_theme_mod('footer_pinterest'); ?>" class="fa-stack fa-lg">
 						<i class="fa fa-circle fa-stack-2x"></i>
 						<i class="fa fa-pinterest-p fa-stack-1x fa-inverse"></i>
 					</a>
 				<?php endif; ?>
 				<?php if( get_theme_mod('footer_git') ) : ?>
-					<a href="#" class="fa-stack fa-lg">
+					<a href="<?php echo get_theme_mod('footer_git'); ?>" class="fa-stack fa-lg">
 						<i class="fa fa-circle fa-stack-2x"></i>
 						<i class="fa fa-git fa-stack-1x fa-inverse"></i>
 					</a>
