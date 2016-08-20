@@ -1,5 +1,41 @@
 <?php
 
+//TGM plugin activator
+require_once get_template_directory()."/tgm/class-tgm-plugin-activation.php";
+
+add_action( 'tgmpa_register', 'theme_slug_register_required_plugins' );
+
+
+function theme_slug_register_required_plugins() {
+
+    $plugins = array(
+      array(
+        "name"=>"Introduce Custom Post Types & Metaboxes",
+        "slug"=>"introduce-cpt",
+        "external_url"=>"https://github.com/mrinal013/introduce-cpt"
+      )
+    );
+
+    $config = array(
+        'id'           => 'tgmpa',
+        'default_path' => get_template_directory()."/plugins/" ,
+        'menu'         => 'tgmpa-install-plugins',
+        'parent_slug'  => 'themes.php',
+        'capability'   => 'edit_theme_options',
+        'has_notices'  => true,
+        'dismissable'  => true,
+        'dismiss_msg'  => '',
+        'is_automatic' => false,
+        'message'      => '',
+    );
+
+    tgmpa( $plugins, $config );
+}
+
+add_action('switch_theme', 'mytheme_setup_options');
+function mytheme_setup_options() {
+  deactivate_plugins( '/introduce-cpt/introduce.php' );
+}
 
 
 // change excerpt box's Title and Description

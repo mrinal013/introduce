@@ -184,14 +184,7 @@ require get_template_directory() . '/inc/jetpack.php';
 */
 require ( get_template_directory(). "/inc/wp_bootstrap_navwalker.php" );
 
-
-
 /**
 * Introduce functions
 */
 require get_template_directory() . '/inc/introduce-functions.php';
-
-/*
-* metaboxes for introduce theme
-*/
-require ( get_template_directory(). "/inc/metaboxes/metaboxes.php" );
