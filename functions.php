@@ -184,10 +184,7 @@ require get_template_directory() . '/inc/jetpack.php';
 */
 require ( get_template_directory(). "/inc/wp_bootstrap_navwalker.php" );
 
-/**
-* Codestar framework include
-*/
-require ( get_template_directory(). "/codestar/cs-framework.php" );
+
 
 /**
 * Introduce functions

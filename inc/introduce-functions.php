@@ -1,14 +1,6 @@
 <?php
 
-//add_filter('deprecated_constructor_trigger_error', '__return_false');
 
-// JQMIGRATE: Migrate is installed, version 1.4.0 - Fix console error
-// add_action( 'wp_default_scripts', function( $scripts ) {
-//     if ( ! empty( $scripts->registered['jquery'] ) ) {
-//         $jquery_dependencies = $scripts->registered['jquery']->deps;
-//         $scripts->registered['jquery']->deps = array_diff( $jquery_dependencies, array( 'jquery-migrate' ) );
-//     }
-// } );
 
 // change excerpt box's Title and Description
 add_filter( 'gettext', 'change_excerpt_title_description', 10, 2 );
@@ -48,20 +40,12 @@ function wpdocs_theme_add_editor_styles() {
     add_editor_style( $font_url );
 }
 
-/*
-* Register a tag box in portfolio cpt
-*/
-add_action( 'init', 'create_book_tax' );
+//add_filter('deprecated_constructor_trigger_error', '__return_false');
 
-function create_book_tax() {
-	register_taxonomy(
-		'portfoio_type',
-		'portfolio',
-		array(
-			'label' => __( 'Type' ),
-			'rewrite' => array( 'slug' => 'portfoio_type' ),
-			'hierarchical' => false,
-            'update_count_callback' => '_update_post_term_count',
-		)
-	);
-}
+// JQMIGRATE: Migrate is installed, version 1.4.0 - Fix console error
+// add_action( 'wp_default_scripts', function( $scripts ) {
+//     if ( ! empty( $scripts->registered['jquery'] ) ) {
+//         $jquery_dependencies = $scripts->registered['jquery']->deps;
+//         $scripts->registered['jquery']->deps = array_diff( $jquery_dependencies, array( 'jquery-migrate' ) );
+//     }
+// } );
