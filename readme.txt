@@ -25,12 +25,14 @@ Introduce is a WordPress theme to smooth experience for creating One Page Websit
 
 = Does this theme support any plugins? =
 
-Include all post types and metaboxes in introduce-cpt plugin. https://github.com/mrinal013/introduce-cpt
+a) https://github.com/mrinal013/introduce-cpt
+It includes all post types and metaboxes in introduce-cpt plugin.
 It is based on
 1. https://github.com/TGMPA/TGM-Plugin-Activation
 2. https://github.com/mrinal013/codestar-framework
 3. https://github.com/YahnisElsts/plugin-update-checker
-4. https://wordpress.org/plugins/post-types-order/
+
+b)https://wordpress.org/plugins/post-types-order/
 
 == Changelog ==
 
@@ -39,5 +41,8 @@ It is based on
 
 == Credits ==
 
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+1. http://underscores.me/
+2. https://github.com/TGMPA/TGM-Plugin-Activation
+3. https://github.com/mrinal013/codestar-framework
+4. https://github.com/YahnisElsts/plugin-update-checker
+5. https://github.com/twbs/bootstrap
