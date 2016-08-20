@@ -4,16 +4,16 @@ Contributors: mrinal013
 Tags: two-columns, responsive
 
 Requires at least: 4.0
-Tested up to: 4.5.3
+Tested up to: 4.6
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called introduce, or underscores.
+A one page theme called introduce.
 
 == Description ==
 
-Hi. I'm a starter theme called introduce, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Introduce is a WordPress theme to smooth experience for creating One Page Website.
 
 == Installation ==
 
@@ -25,11 +25,15 @@ Hi. I'm a starter theme called introduce, or underscores, if you like. I'm a the
 
 = Does this theme support any plugins? =
 
-introduce includes support for Infinite Scroll in Jetpack.
+Include all post types and metaboxes in introduce-cpt plugin. https://github.com/mrinal013/introduce-cpt
+It is based on
+1. https://github.com/TGMPA/TGM-Plugin-Activation
+2. https://github.com/mrinal013/codestar-framework
+3. https://github.com/YahnisElsts/plugin-update-checker
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0 - August 20, 2016 =
 * Initial release
 
 == Credits ==
