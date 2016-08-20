@@ -30,6 +30,7 @@ It is based on
 1. https://github.com/TGMPA/TGM-Plugin-Activation
 2. https://github.com/mrinal013/codestar-framework
 3. https://github.com/YahnisElsts/plugin-update-checker
+4. https://wordpress.org/plugins/post-types-order/
 
 == Changelog ==
 

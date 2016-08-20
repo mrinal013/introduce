@@ -13,7 +13,13 @@ function theme_slug_register_required_plugins() {
         "name"=>"Introduce Custom Post Types & Metaboxes",
         "slug"=>"introduce-cpt",
         "external_url"=>"https://github.com/mrinal013/introduce-cpt"
-      )
+      ),
+      //from WordPress plugins repo
+      array(
+          'name'      => 'Post Types Order',
+          'slug'      => 'post-types-order',
+          'required'  => false,
+      ),
     );
 
     $config = array(
@@ -34,7 +40,7 @@ function theme_slug_register_required_plugins() {
 
 add_action('switch_theme', 'mytheme_setup_options');
 function mytheme_setup_options() {
-  deactivate_plugins( '/introduce-cpt/introduce.php' );
+  deactivate_plugins( '/introduce-cpt/introduce.php', '/post-types-order/post-types-order.php' );
 }
 
 
