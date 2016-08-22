@@ -37,7 +37,7 @@
                         <a class="navbar-brand" href="<?php echo home_url(); ?>">
                             <?php
                             if( null != get_theme_mod('introduce_header_logo_setting') ) { ?>
-                                <img src="<?php echo get_theme_mod('introduce_header_logo_setting'); ?>" alt="<?php bloginfo('name'); ?>" />
+                                <img src="<?php echo get_theme_mod('introduce_header_logo_setting'); ?>" alt="<?php bloginfo('name'); ?>" class="img-circle" />
                             <?php
                             }
                             else if( null != get_theme_mod('introduce_header_title_setting') )

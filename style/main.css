@@ -80,10 +80,12 @@
   line-height: 50px;
 }
 .navbar-brand {
-  margin-left: 0;
+  margin-left: 15px;
+  padding: 0;
+  font-size: 20px;
 }
 .navbar-brand img {
-  height: 48px;
+  height: 58px;
 }
 .search-wrapper {
   position: absolute;
@@ -1231,4 +1233,15 @@ code {
 }
 html {
   font-size: 16px;
+}
+#content {
+  padding: 0;
+}
+.navbar-default {
+  background-color: transparent;
+}
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+  margin-left: 15px;
+  margin-top: 15px;
 }
