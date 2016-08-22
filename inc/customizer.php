@@ -5,6 +5,8 @@
  * @package introduce
  */
 
+
+
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
@@ -25,13 +27,49 @@ function introduce_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'introduce_customize_preview_js' );
 
-// footer settings
+add_action( 'customize_register', 'introduce_theme_customizer' );
 // dynamic text and background-color with customizer
 function introduce_theme_customizer( $wp_customize ) {
+	/*
+	* Header Settings
+	*/
+	$wp_customize->add_section( 'introduce_header_section', array(
+		'title'			=> __( 'Header', 'introduce' ),
+		'priority'    => 10,
+	));
+
+	$wp_customize->add_setting( 'introduce_header_logo_setting', array(
+		'default'		=> '',
+		//'transport'		=> 'postMessage',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'introduce_header_logo_setting',
+			array(
+				'label'		=> __( 'Header Logo', 'introduce' ),
+				'section'	=> 'introduce_header_section',
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'introduce_header_title_setting', array(
+		'sanitize_callback' => 'esc_html',
+	) );
+
+	$wp_customize->add_control( 'introduce_header_title_setting', array(
+	    'label'    => __( 'Header Title', 'introduce' ),
+	    'section'  => 'introduce_header_section',
+	) );
+
+	/*
+	* Footer section
+	*/
 	$wp_customize->add_section( 'introduce_footer_section' , array(
 	    'title'       => __( 'Footer', 'introduce' ),
 	    'priority'    => 30,
-	    'description' => __( 'Footer Settings', 'introduce' ),
+	    //'description' => __( 'Footer Settings', 'introduce' ),
 	) );
 
 	$wp_customize->add_setting( 'introduce_footer_bg', array(
@@ -174,8 +212,14 @@ function introduce_theme_customizer( $wp_customize ) {
 	    'section' => 'introduce_footer_section',
 	    'label' => __( 'Git', 'introduce' ),
 	) );
+}
 
+// remove default customizer settings
+add_action( 'customize_register', 'introduce_remove_default_customizer');
 
+function introduce_remove_default_customizer( $wp_customize ) {
+
+	$wp_customize->remove_section('title_tagline');
+	$wp_customize->remove_section('header_image');
 
 }
-add_action( 'customize_register', 'introduce_theme_customizer' );

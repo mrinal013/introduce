@@ -19,7 +19,7 @@ $button_setting = $banner_data['button_setting'];
 // print_r($button_setting);
 // echo "</pre>";
 ?>
-<section id="welcome" class="jumbotron" style="background-image: url(<?php echo $section_background; ?>)">
+<section id="welcome" class="jumbotron" style="background-image: url('<?php echo $section_background; ?>')">
     <div class="container" >
         <div class="welcome-message">
             <h1><?php echo $title; ?></h1>

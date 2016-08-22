@@ -17,26 +17,13 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri() . '/style/bootstrap.css'; ?>"> -->
-        <!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri() . '/style/font-awesome/css/font-awesome.min.css'; ?>"> -->
-        <!-- <link rel="stylesheet" href="isotope/style.css"> -->
-        <!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri() . '/style/overlay-bootstrap.css'; ?>"> -->
-        <!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri() . '/fancybox/source/jquery.fancybox.css?v=2.1.5'; ?>" type="text/css" media="screen" /> -->
-        <!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri() . '/style/colorbox/colorbox.css'; ?>" media="screen" title="no title"> -->
-        <!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri() . '/style/main.css'; ?>"> -->
-        <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
-        <!-- <script src="https://use.fontawesome.com/25f8a3cd3a.js"></script> -->
 <?php wp_head(); ?>
     </head>
     <body <?php body_class( ); ?>>
 
         <!-- Add your site or application content here -->
         <header>
-            <!-- Static navbar -->
+            <!-- Top fixed navbar -->
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
               <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -47,14 +34,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                            <?php bloginfo('name'); ?>
+                        <a class="navbar-brand" href="<?php echo home_url(); ?>">
+                            <?php
+                            if( null != get_theme_mod('introduce_header_logo_setting') ) { ?>
+                                <img src="<?php echo get_theme_mod('introduce_header_logo_setting'); ?>" alt="<?php bloginfo('name'); ?>" />
+                            <?php
+                            }
+                            else if( null != get_theme_mod('introduce_header_title_setting') )
+                                echo get_theme_mod('introduce_header_title_setting');
+                            else
+                                bloginfo('name');
+                            ?>
                         </a>
                 </div>
                 <?php get_search_form(); ?>
-                
-
-
                     <?php
                         wp_nav_menu( array(
                             'menu'              => 'blog_menu',
