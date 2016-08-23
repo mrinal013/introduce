@@ -41,6 +41,20 @@
 .navbar-right {
   margin-right: 0px;
 }
+.navbar-default {
+  background-color: transparent;
+}
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-collapse {
+  margin: 0;
+}
 .site-content {
   padding-top: 50px;
 }
@@ -1236,12 +1250,5 @@ html {
 }
 #content {
   padding: 0;
-}
-.navbar-default {
-  background-color: transparent;
-}
-.navbar > .container .navbar-brand,
-.navbar > .container-fluid .navbar-brand {
-  margin-left: 15px;
-  margin-top: 15px;
+  margin-top: 50px;
 }
