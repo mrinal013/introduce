@@ -2,6 +2,7 @@ var less = require('gulp-less');
 var path = require('path');
 var gulp = require('gulp');
 var watch = require('gulp-watch');
+var livereload = require('gulp-livereload');
 
 gulp.task('default', function() {
 
@@ -13,9 +14,21 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(gulp.dest('./style'));
+    .pipe(gulp.dest('./style'))
+    .pipe(livereload());
+});
+
+gulp.task('less-main', function () {
+  return gulp.src('./style/main.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(gulp.dest('./style'))
+    .pipe(livereload());
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./style/less/bootstrap.less', ['less'] );
+    livereload.listen();
+    gulp.watch('./style/less/*.less', ['less'] );
+    gulp.watch('./style/main.less', ['less'] );
 });
