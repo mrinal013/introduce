@@ -1,14 +1,17 @@
 @navbar-height: 50px;
 @welcome-height: 500px;
 
+.navbar {
+    margin-bottom: 0px;
+    //background-color: red !important;
+    height: @navbar-height;
+}
 .navbar-right {
     margin-right: 0px;
-
 }
 
 .navbar-default {
-    background-color: transparent;
-
+    background-color: #fff;
 }
 
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
@@ -16,33 +19,15 @@
     margin-top: 15px;
 }
 
-.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
-    margin: 0;
-}
-.site-content {
-    padding-top: @navbar-height;
-}
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.office_title {
-    color: red;
-}
-.widget {
-	margin: 0 0 1.5em;
-}
 
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
-}
-.widget-area {
+.site-content {
     //padding-top: @navbar-height;
 }
+
 .navbar {
     border: none;
     .container-fluid {
-        padding: 0;
+        padding: 0px;
     }
     .navbar-header {
         display: inline-block;
@@ -51,14 +36,14 @@
 
 #iris-navbar {
     .nav {
-        margin-right: 0;
+        margin-right: 0px;
     }
 }
 .search {
     background-color: #000;
     cursor: pointer;
     i{
-        padding: 0 20px;
+        padding: 0px 20px;
         color: #fff;
         font-size: 28px;
         line-height: @navbar-height;
@@ -103,9 +88,6 @@
     color: #ccc;
 }
 
-@media (max-width: 1000px) {
-
-}
 
 @media (min-width: 992px) {
     .navbar-right .dropdown-menu {
@@ -1186,6 +1168,24 @@ footer {
         }
     }
 
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.office_title {
+    color: red;
+}
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+.widget-area {
+    //padding-top: @navbar-height;
 }
 
 .footer_widget_area {
