@@ -19,7 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php wp_head(); ?>
     </head>
-    <body <?php body_class( ); ?>>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50" <?php body_class( ); ?>>
 
         <!-- Add your site or application content here -->
         <header>
@@ -49,17 +49,32 @@
                 </div>
                 <?php get_search_form(); ?>
                     <?php
+                    if (is_home()) {
                         wp_nav_menu( array(
                             'menu'              => 'blog_menu',
                             'theme_location'    => 'blog_menu',
                             'depth'             => 4,
                             'container'         => 'div',
                             'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => 'bs-example-navbar-collapse-1',
+                            'container_id'      => 'bs-example-navbar-collapse-1',
                             'menu_class'        => 'nav navbar-nav navbar-right',
                             'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                             'walker'            => new wp_bootstrap_navwalker())
                         );
+                    }
+                    else {
+                        wp_nav_menu( array(
+                            'menu'              => 'one_page_menu',
+                            'theme_location'    => 'one_page_menu',
+                            'depth'             => 4,
+                            'container'         => 'div',
+                            'container_class'   => 'collapse navbar-collapse',
+                            'container_id'      => 'bs-example-navbar-collapse-1',
+                            'menu_class'        => 'nav navbar-nav navbar-right',
+                            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                            'walker'            => new wp_bootstrap_navwalker())
+                        );
+                    }
                     ?>
                 </div>
             </nav>
