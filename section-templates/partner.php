@@ -2,6 +2,9 @@
 
 $section = get_the_ID();
 
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
+
 $general_data = get_post_meta( $section, "common_settings", true );
 $partner_data  = get_post_meta( $section, "partner_settings", true );
 
@@ -27,7 +30,7 @@ if( $count == 1 ) {
 
 ?>
 
-<section id="partner">
+<section id="<?php echo $section_id; ?>" class="partner">
     <div class="container">
         <h1><?php echo $general_data['title']; ?></h1>
         <p><?php echo $general_data['subtitle']; ?></p>

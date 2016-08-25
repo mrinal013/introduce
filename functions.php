@@ -154,6 +154,14 @@ function introduce_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'introduce_scripts' );
 
+function mytheme_enqueue_front_page_scripts() {
+    if( !is_home() )
+    {
+        wp_enqueue_script( 'one-page-nav', get_template_directory_uri() . '/js/one-page-nav.js' , array( 'jquery' ), null, true );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_front_page_scripts' );
+
 /**
  * Implement the Custom Header feature.
  */

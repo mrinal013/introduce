@@ -1,6 +1,9 @@
 <?php
 $section = get_the_ID();
 
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
+
 $general_data = get_post_meta( $section, "common_settings", true );
 $skil_data  = get_post_meta( $section, "skil_settings", true );
 
@@ -19,7 +22,7 @@ $skil_items = $skil_data['skil_items'];
 
 
 ?>
-<section id="skil" style="background-color:<?php echo $color; ?>; background-image: url(<?php echo $background; ?>); ">
+<section id="<?php echo $section_id; ?>" class="skil" style="background-color:<?php echo $color; ?>; background-image: url(<?php echo $background; ?>); ">
     <div class="container">
 
         <div class="row">

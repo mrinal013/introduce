@@ -50,6 +50,8 @@
                 <?php get_search_form(); ?>
                     <?php
                     if (is_home()) {
+
+
                         wp_nav_menu( array(
                             'menu'              => 'blog_menu',
                             'theme_location'    => 'blog_menu',
@@ -63,6 +65,7 @@
                         );
                     }
                     else {
+                        
                         wp_nav_menu( array(
                             'menu'              => 'one_page_menu',
                             'theme_location'    => 'one_page_menu',

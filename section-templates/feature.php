@@ -13,13 +13,16 @@ $section_background = $general_data['section_background'];
 $feature_logo = $feature_data['feature_logo'];
 
 $features = $feature_data['feature_items'];
+
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
 // echo "<pre>";
 // print_r($features);
 // echo "</pre>";
 
 ?>
 
-<section id="features" style="background-image: url(<?php echo $section_background; ?>)">
+<section id="<?php echo $section_id; ?>" class="feature" style="background-image: url(<?php echo $section_background; ?>)">
     <div class="container-fluid">
         <img src="<?php echo $feature_logo; ?>" alt="feature-logo" />
         <h1><?php echo $title; ?></h1><hr/>

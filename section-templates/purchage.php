@@ -1,5 +1,8 @@
 <?php
 $section = get_the_ID();
+
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
 //echo $section;
 $general_data = get_post_meta( $section, "common_settings", true );
 $purchage_data  = get_post_meta( $section, "purchage_settings", true );
@@ -11,7 +14,7 @@ $section_background = $general_data['section_background'];
 $p_buttons = $purchage_data['purchage_items'];
 ?>
 
-<section id="purchage" style="background-image: url(<?php echo $section_background; ?>)">
+<section id="<?php echo $section_id; ?>" class="purchage" style="background-image: url(<?php echo $section_background; ?>)">
     <div class="container">
         <div class="row">
             <p class="title"><?php echo $general_data['title']; ?></p>

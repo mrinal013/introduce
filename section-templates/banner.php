@@ -15,11 +15,14 @@ $section_background = $general_data['section_background'];
 
 $button_setting = $banner_data['button_setting'];
 
+$permalink = get_post_permalink($section);
+//echo basename($permalink);
+$section_id = basename($permalink);
 // echo "<pre>";
 // print_r($button_setting);
 // echo "</pre>";
 ?>
-<section id="welcome" class="jumbotron" style="background-image: url('<?php echo $section_background; ?>')">
+<section id="<?php echo $section_id; ?>" class="banner jumbotron" style="background-image: url('<?php echo $section_background; ?>')">
     <div class="container" >
         <div class="welcome-message">
             <h1><?php echo $title; ?></h1>

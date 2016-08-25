@@ -1,5 +1,8 @@
 <?php
 $section = get_the_ID();
+
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
 //echo $section;
 $section_type_info = get_post_meta(get_the_ID(),'section_types', true);
 $section_type = $section_type_info['section_type'];

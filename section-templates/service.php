@@ -2,6 +2,9 @@
 
 $section = get_the_ID();
 
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
+
 $general_data = get_post_meta( $section, "common_settings", true );
 $review_data  = get_post_meta( $section, "review_settings", true );
 
@@ -34,7 +37,7 @@ $services = new WP_Query( $args );
 // 	// no posts found
 // }
 ?>
-<section id="service">
+<section id="<?php echo $section_id; ?>" class="service">
     <div class="container">
         <div class="row">
             <p class="title"><?php echo $title; ?></p>

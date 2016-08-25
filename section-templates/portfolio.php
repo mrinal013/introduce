@@ -1,5 +1,8 @@
 <?php
 $section = get_the_ID();
+
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
 //echo $section;
 $general_data = get_post_meta( $section, "common_settings", true );
 $portfolio_data  = get_post_meta( $section, "portfolio_settings", true );
@@ -24,7 +27,7 @@ if( $portfolies->have_posts() ) :
 endif;
 ?>
 
-<section id="portfolio">
+<section id="<?php echo $section_id; ?>" class="portfolio">
     <p class="title">Our work</p>
     <p class="subtitle">We love our works</p>
     <div id="filters" class="button-group">

@@ -2,6 +2,9 @@
 
 $section = get_the_ID();
 
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
+
 $general_data = get_post_meta( $section, "common_settings", true );
 $team_data  = get_post_meta( $section, "team_settings", true );
 

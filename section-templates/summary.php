@@ -1,13 +1,16 @@
 <?php
 $section = get_the_ID();
 
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
+
 $general_data = get_post_meta( $section, "common_settings", true );
 $summary_data  = get_post_meta( $section, "summary_settings", true );
 
 $s_items = $summary_data['summary_items'];
 
 ?>
-<section id="summary">
+<section id="<?php echo $section_id; ?>" class="summary">
     <div class="container">
         <div class="row">
         <?php foreach( $s_items as $items ) : ?>

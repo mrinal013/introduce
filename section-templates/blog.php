@@ -2,6 +2,9 @@
 
 $section = get_the_ID();
 
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
+
 $general_data = get_post_meta( $section, "common_settings", true );
 $team_data  = get_post_meta( $section, "team_settings", true );
 
@@ -21,7 +24,7 @@ $args = array (
 $the_query = new WP_Query( $args );
 ?>
 
-<section id="blog">
+<section id="<?php echo $section_id; ?>" class="blog">
     <div class="container-fluid">
         <p class="title"><?php echo $title; ?></p>
         <p class="subtitle"><?php echo $subtitle; ?></p>

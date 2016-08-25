@@ -1,6 +1,9 @@
 <?php
 $section = get_the_ID();
 
+$permalink = get_post_permalink($section);
+$section_id = basename($permalink);
+
 $general_data = get_post_meta( $section, "common_settings", true );
 $review_data  = get_post_meta( $section, "review_settings", true );
 
@@ -18,7 +21,7 @@ if( isset($review_data['review_items']) ) {
 // echo "</pre>";
 
 ?>
-<section id="review">
+<section id="<?php echo $section_id; ?>" class="review">
     <div class="container">
         <div class="title"><?php echo $title; ?></div>
         <div class="subtitle"><?php echo $subtitle; ?></div>
