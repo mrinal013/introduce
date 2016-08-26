@@ -1,27 +1,9 @@
 <?php
 
-
-// if( is_home() ) {
-//     add_filter('wp_nav_menu_objects' , 'sections_link');
-//     function sections_link( $items ) {
-//         foreach ( $items as $item ) {
-//            print_r($item);//print each menu item an get your parent menu item-id
-//            echo "<br/>";
-//          }
-//
-//         //echo "Hello";
-//     }
-// }
-
-
-
-
 //TGM plugin activator
 require_once get_template_directory()."/tgm/class-tgm-plugin-activation.php";
 
 add_action( 'tgmpa_register', 'theme_slug_register_required_plugins' );
-
-
 function theme_slug_register_required_plugins() {
 
     $plugins = array(

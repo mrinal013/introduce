@@ -49,12 +49,10 @@
                 </div>
                 <?php get_search_form(); ?>
                     <?php
-                    if (is_home()) {
-
-
+                    if ( is_page_template( 'homepage.php' ) ) {
                         wp_nav_menu( array(
-                            'menu'              => 'blog_menu',
-                            'theme_location'    => 'blog_menu',
+                            'menu'              => 'one_page_menu',
+                            'theme_location'    => 'one_page_menu',
                             'depth'             => 4,
                             'container'         => 'div',
                             'container_class'   => 'collapse navbar-collapse',
@@ -65,10 +63,9 @@
                         );
                     }
                     else {
-                        
                         wp_nav_menu( array(
-                            'menu'              => 'one_page_menu',
-                            'theme_location'    => 'one_page_menu',
+                            'menu'              => 'blog_menu',
+                            'theme_location'    => 'blog_menu',
                             'depth'             => 4,
                             'container'         => 'div',
                             'container_class'   => 'collapse navbar-collapse',
