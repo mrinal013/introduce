@@ -13,7 +13,9 @@ $title = $general_data['title'];
 $subtitle = $general_data['subtitle'];
 $section_background = $general_data['section_background'];
 
-$button_setting = $banner_data['button_setting'];
+if( is_array( $banner_data ) || is_object( $banner_data ) ) :
+    $button_setting = $banner_data['button_setting'];
+endif;
 
 $permalink = get_post_permalink($section);
 //echo basename($permalink);
@@ -29,11 +31,11 @@ $section_id = basename($permalink);
             <p><?php echo $subtitle; ?></p>
             <?php
 
-            //if( is_array( $button_setting ) || is_object( $button_setting ) ) :
+            if( isset( $button_setting ) && ( is_array( $button_setting ) || is_object( $button_setting ) ) ) :
 
             foreach($button_setting as $button ) : ?>
                 <a href="<?php echo $button['button_url']; ?>" class="btn btn-lg btn-primary"><?php echo $button['button_title']; ?></a>
-            <?php  endforeach; //endif; ?>
+            <?php  endforeach; endif; ?>
 
         </div>
     </div>
