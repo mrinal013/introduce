@@ -123,6 +123,7 @@ function introduce_scripts() {
 	wp_enqueue_style( 'introduce-overlay-bootstrap-style', get_template_directory_uri() . '/style/overlay-bootstrap.css' );
 
 	wp_enqueue_style( 'introduce-fancybox-style', get_template_directory_uri() . '/style/fancybox/jquery.fancybox.css' );
+	wp_enqueue_style( 'introduce-fancybox-style', get_template_directory_uri() . '/fancybox/source/jquery.fancybox.css' );
 
 	wp_enqueue_style( 'introduce-colorbox-style', get_template_directory_uri() . '/style/colorbox/colorbox.css' );
 
@@ -135,6 +136,7 @@ function introduce_scripts() {
 	wp_enqueue_script( 'introduce-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'introduce-fancybox', get_template_directory_uri() . '/style/fancybox/jquery.fancybox.pack.js', array('jquery'), '', true );
+	wp_enqueue_script( 'introduce-fancybox', get_template_directory_uri() . '/fancybox/source/jquery.fancybox.pack.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'introduce-colorbox', get_template_directory_uri() . '/js/jquery.colorbox.js', array('jquery'), '', true );
 
