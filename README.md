@@ -2,6 +2,7 @@
 Introduce is a WordPress theme to smooth experience for creating Website.
 
 Contributors: mrinal013
+
 Tags: two-columns, responsive
 
 Requires at least: 4.0
