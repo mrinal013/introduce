@@ -133,24 +133,24 @@ function introduce_scripts() {
 
 
 
-	wp_enqueue_script( 'introduce-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '', true );
+	wp_enqueue_script( 'introduce-bootstrap', get_template_directory_uri() . '/style/js/bootstrap.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'introduce-fancybox', get_template_directory_uri() . '/style/fancybox/jquery.fancybox.pack.js', array('jquery'), '', true );
 	wp_enqueue_script( 'introduce-fancybox', get_template_directory_uri() . '/fancybox/source/jquery.fancybox.pack.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'introduce-colorbox', get_template_directory_uri() . '/js/jquery.colorbox.js', array('jquery'), '', true );
+	wp_enqueue_script( 'introduce-colorbox', get_template_directory_uri() . '/style/js/jquery.colorbox.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'introduce-isotope', get_template_directory_uri() . '/js/isotope.pkgd.js', array('jquery'), '', true );
+	wp_enqueue_script( 'introduce-isotope', get_template_directory_uri() . '/style/js/isotope.pkgd.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'introduce-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '', true );
+	wp_enqueue_script( 'introduce-plugins', get_template_directory_uri() . '/style/js/plugins.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'one-page-nav', get_template_directory_uri() . '/js/one-page-nav.js' , array( 'jquery' ), null, true );
+	wp_enqueue_script( 'one-page-nav', get_template_directory_uri() . '/style/js/one-page-nav.js' , array( 'jquery' ), null, true );
 
-	wp_enqueue_script( 'introduce-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
+	wp_enqueue_script( 'introduce-main', get_template_directory_uri() . '/style/js/main.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'introduce-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'introduce-navigation', get_template_directory_uri() . '/style/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'introduce-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'introduce-skip-link-focus-fix', get_template_directory_uri() . '/style/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
