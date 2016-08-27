@@ -26,6 +26,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 a) https://github.com/mrinal013/introduce-cpt
 It includes all post types and metaboxes in introduce-cpt plugin.
 It is based on
+
 1. https://github.com/TGMPA/TGM-Plugin-Activation
 2. https://github.com/mrinal013/codestar-framework
 3. https://github.com/YahnisElsts/plugin-update-checker
