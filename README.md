@@ -32,10 +32,6 @@ It is based on
 
 b)https://wordpress.org/plugins/post-types-order/
 
-== Changelog ==
-
-= 1.0 - August 20, 2016 =
-* Initial release
 
 == Credits ==
 
