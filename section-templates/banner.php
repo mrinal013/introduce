@@ -7,7 +7,7 @@ $section_id = basename($permalink);
 $general_data = get_post_meta( $section, "common_settings", true );
 $title = $general_data['title'];
 $subtitle = $general_data['subtitle'];
-$section_background = $general_data['section_background'];
+$section_background_image = $general_data['section_background_image'];
 
 $banner_data  = get_post_meta( $section, "banner_settings", true );
 
@@ -15,9 +15,9 @@ if( is_array( $banner_data ) || is_object( $banner_data ) ) :
     $button_setting = $banner_data['button_setting'];
 endif;
 ?>
-<section id="<?php echo $section_id; ?>" class="banner jumbotron" style="background-image: url('<?php echo $section_background; ?>')">
+<section id="<?php echo $section_id; ?>" class="banner jumbotron" style="background-image: url('<?php echo $section_background_image; ?>')">
     <div class="container" >
-        <div class="welcome-message">
+        <div class="welcome-message shadow">
             <h1><?php echo $title; ?></h1>
             <p><?php echo $subtitle; ?></p>
             <?php

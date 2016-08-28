@@ -1,30 +1,21 @@
 <?php
 $section = get_the_ID();
-//echo $section;
-$general_data = get_post_meta( $section, "common_settings", true );
-$feature_data  = get_post_meta( $section, "feature_settings", true );
-
-// echo "<pre>";
-// print_r($feature_data);
-// echo "</pre>";
-$title = $general_data['title'];
-$subtitle = $general_data['subtitle'];
-$section_background = $general_data['section_background'];
-$feature_logo = $feature_data['feature_logo'];
-
-$features = $feature_data['feature_items'];
-
 $permalink = get_post_permalink($section);
 $section_id = basename($permalink);
-// echo "<pre>";
-// print_r($features);
-// echo "</pre>";
 
+$general_data = get_post_meta( $section, "common_settings", true );
+$title = $general_data['title'];
+$subtitle = $general_data['subtitle'];
+$section_background_image = $general_data['section_background_image'];
+$section_background_color = $general_data['section_background_color'];
+
+$feature_data  = get_post_meta( $section, "feature_settings", true );
+$feature_logo = $feature_data['feature_logo'];
+$features = $feature_data['feature_items'];
 ?>
-
-<section id="<?php echo $section_id; ?>" class="feature" style="background-image: url(<?php echo $section_background; ?>)">
+<section id="<?php echo $section_id; ?>" class="feature" style="background-image: url(<?php echo $section_background_image; ?>); background-color: <?php echo $section_background_color; ?> ">
     <div class="container-fluid">
-        <img src="<?php echo $feature_logo; ?>" alt="feature-logo" />
+        <img src="<?php echo $feature_logo; ?>" alt="feature-logo" class="img-circle" />
         <h1><?php echo $title; ?></h1><hr/>
         <p class="subtitle"><?php echo $subtitle; ?></p>
         <div class="row">

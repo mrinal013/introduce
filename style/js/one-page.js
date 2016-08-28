@@ -5,5 +5,7 @@
         slug = url[url.length - 2];
         slugid = '#' + slug;
         $(this).attr('href', slugid );
-    })
+    });
+    // alert("Hello");
+
 });

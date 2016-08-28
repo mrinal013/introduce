@@ -123,7 +123,6 @@ function introduce_scripts() {
 	wp_enqueue_style( 'introduce-overlay-bootstrap-style', get_template_directory_uri() . '/style/overlay-bootstrap.css' );
 
 	wp_enqueue_style( 'introduce-fancybox-style', get_template_directory_uri() . '/style/fancybox/jquery.fancybox.css' );
-	wp_enqueue_style( 'introduce-fancybox-style', get_template_directory_uri() . '/fancybox/source/jquery.fancybox.css' );
 
 	wp_enqueue_style( 'introduce-colorbox-style', get_template_directory_uri() . '/style/colorbox/colorbox.css' );
 
@@ -131,11 +130,11 @@ function introduce_scripts() {
 
 	wp_enqueue_style( 'introduce-main-style', get_template_directory_uri() . '/style/main.css' );
 
-
-
+	// js script enqueue
 	wp_enqueue_script( 'introduce-bootstrap', get_template_directory_uri() . '/style/js/bootstrap.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'introduce-fancybox', get_template_directory_uri() . '/style/fancybox/jquery.fancybox.pack.js', array('jquery'), '', true );
+
 	wp_enqueue_script( 'introduce-fancybox', get_template_directory_uri() . '/fancybox/source/jquery.fancybox.pack.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'introduce-colorbox', get_template_directory_uri() . '/style/js/jquery.colorbox.js', array('jquery'), '', true );
@@ -144,9 +143,13 @@ function introduce_scripts() {
 
 	wp_enqueue_script( 'introduce-plugins', get_template_directory_uri() . '/style/js/plugins.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'one-page-nav', get_template_directory_uri() . '/style/js/one-page-nav.js' , array( 'jquery' ), null, true );
-
 	wp_enqueue_script( 'introduce-main', get_template_directory_uri() . '/style/js/main.js', array('jquery'), '', true );
+
+	// only if front page template is homepage.php
+	if( is_page_template( 'homepage.php' ) ) {
+		wp_enqueue_style( 'introduce-one-page-css', get_template_directory_uri() . '/style/css/one-page.css' );
+		wp_enqueue_script( 'introduce-one-page-js', get_template_directory_uri() . '/style/js/one-page.js' , array( 'jquery' ), null, true );
+	}
 
 	wp_enqueue_script( 'introduce-navigation', get_template_directory_uri() . '/style/js/navigation.js', array(), '20151215', true );
 

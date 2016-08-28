@@ -21,7 +21,6 @@
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50" <?php body_class( ); ?>>
 
-        <!-- Add your site or application content here -->
         <header>
             <!-- Top fixed navbar -->
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -47,9 +46,9 @@
                             ?>
                         </a>
                 </div>
-                <?php get_search_form(); ?>
                     <?php
                     if ( is_page_template( 'homepage.php' ) ) {
+                        get_search_form();
                         wp_nav_menu( array(
                             'menu'              => 'one_page_menu',
                             'theme_location'    => 'one_page_menu',
