@@ -41,7 +41,6 @@ endif;
             <button class="button" data-filter=".<?php echo $type; ?>"><?php echo $type; ?></button>
         <?php }
         ?>
-
     </div>
 
     <div class="grid">
@@ -60,9 +59,10 @@ endif;
                     <div class="image">
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="Blog Post" />
                         <div class="overlay">
-                            <a class="colorbox" href="<?php the_post_thumbnail_url(); ?>">
+                            <a class="colorbox" href="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>">
                                 <i class="fa fa-plus-circle"></i>
                             </a>
+                            <a class="colorbox" href="" title="<?php the_title(); ?>"></a>
                         </div>
                     </div>
                 </div>
