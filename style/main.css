@@ -1,40 +1,36 @@
 .navbar {
-  margin-bottom: 0px;
-  height: 60px;
-}
-.navbar-right {
-  margin-right: 0px;
-}
-.navbar-default {
-  background-color: #205081;
-}
-.navbar-default a {
-  font-size: 16px;
-  color: red;
-}
-.navbar-nav li a:hover {
-  padding-top: 5px;
-  transition: padding-top 1s;
-}
-.navbar > .container .navbar-brand,
-.navbar > .container-fluid .navbar-brand {
-  margin-left: 15px;
-  margin-top: 15px;
-}
-.site-content {
-  padding-top: 60px;
-}
-.navbar {
+  margin-bottom: 0;
   border: none;
-}
-.navbar .container-fluid {
-  padding: 0px;
+  height: 60px;
+  background-color: #205081;
 }
 .navbar .navbar-header {
   display: inline-block;
 }
-#iris-navbar .nav {
-  margin-right: 0px;
+.navbar .navbar-header .navbar-brand {
+  font-size: 25px;
+}
+.navbar .navbar-header .navbar-brand img {
+  width: 100px;
+}
+.navbar .navbar-nav {
+  background-color: #ff4c4c;
+}
+.navbar .navbar-nav li a {
+  background-color: green;
+  font-size: 16px;
+}
+@media (min-width: 1199px) {
+  .navbar-right {
+    margin-right: 0;
+  }
+  .navbar-nav li a {
+    font-size: 16px;
+  }
+  .navbar-nav li a:hover {
+    padding-top: 5px;
+    transition: padding-top 1s;
+  }
 }
 .search {
   background-color: #000;
@@ -45,14 +41,6 @@
   color: #fff;
   font-size: 28px;
   line-height: 60px;
-}
-.navbar-brand {
-  margin-left: 15px;
-  padding: 0;
-  font-size: 20px;
-}
-.navbar-brand img {
-  height: 70px;
 }
 .search-wrapper {
   position: absolute;
@@ -77,11 +65,6 @@
   cursor: pointer;
   color: #000;
 }
-@media (min-width: 992px) {
-  .navbar-right .dropdown-menu {
-    right: auto;
-  }
-}
 .banner {
   height: 500px;
   margin-bottom: 0;
@@ -90,13 +73,21 @@
   position: relative;
 }
 .banner .shadow {
-  background-color: rgba(3, 3, 3, 0.3);
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 40%;
+  min-height: 50%;
 }
 .banner .welcome-message {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-width: 40%;
+  min-height: 50%;
   padding: 20px;
   text-align: center;
 }
@@ -106,7 +97,7 @@
   font-weight: 900;
 }
 .banner .welcome-message a {
-  margin-top: 80px;
+  margin-top: 10%;
   border: 1px solid #fff;
   border-radius: 0px;
   background-color: transparent;
@@ -134,26 +125,35 @@
 .feature img {
   display: block;
   margin: 20px auto;
+  width: 150px;
+  height: 150px;
 }
 .feature h1 {
   text-align: center;
 }
 .feature .subtitle {
   width: 70%;
-  margin: 30px auto;
+  margin: 0 auto;
   text-align: center;
   line-height: 30px;
+  font-size: 20px;
 }
 .feature .featured-item {
   text-align: center;
   padding: 20px;
   min-height: 280px;
 }
+.feature .featured-item:hover .fa-circle {
+  color: midnightblue;
+}
 .feature .featured-item .fa-circle {
   color: #E64A19;
   border-radius: 90px;
   border: 1px solid #fff;
   box-shadow: 0px 0px 20px #888;
+}
+.feature .featured-item .fa-circle:hover {
+  color: transparent;
 }
 .feature .featured-item .fa-black-circle {
   color: #000000;
@@ -178,11 +178,10 @@
   padding: 0.5em 1.0em;
   font-family: sans-serif;
   font-size: 16px;
-  text-shadow: 0 1px white;
   cursor: pointer;
 }
 .portfolio .button:hover {
-  background-color: #E64A19;
+  background-color: #000;
   color: #fff;
 }
 .portfolio .button.is-checked {
@@ -220,7 +219,6 @@
 }
 .portfolio .grid .element-item .overlay a {
   color: #000;
-  margin-left: 15px;
 }
 .portfolio .grid .element-item .overlay a .fa {
   font-size: 40px;
@@ -269,11 +267,10 @@
   text-align: center;
 }
 .portfolio .title {
-  font-size: 32px;
+  font-size: 36px;
 }
 .portfolio .subtitle {
   font-size: 20px;
-  font-style: italic;
 }
 .service .container {
   min-height: 500px;

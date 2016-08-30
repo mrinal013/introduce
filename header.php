@@ -19,20 +19,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php wp_head(); ?>
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="50" <?php body_class( ); ?>>
+    <body data-spy="scroll" data-target=".navbar" data-offset="60" <?php body_class( ); ?>>
 
         <header>
+
             <!-- Top fixed navbar -->
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-              <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
+
                         <a class="navbar-brand" href="<?php echo home_url(); ?>">
                             <?php
                             if( null != get_theme_mod('introduce_header_logo_setting') ) { ?>
@@ -45,7 +40,15 @@
                                 bloginfo('name');
                             ?>
                         </a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+
                 </div>
+
                     <?php
                     if ( is_page_template( 'homepage.php' ) ) {
                         get_search_form();
@@ -75,9 +78,7 @@
                         );
                     }
                     ?>
-                </div>
             </nav>
-
 
         </header>
 

@@ -1,52 +1,54 @@
 @navbar-height: 60px;
 @welcome-height: 500px;
 
-.navbar {
-    margin-bottom: 0px;
-    height: @navbar-height;
-}
-.navbar-right {
-    margin-right: 0px;
-}
-
-.navbar-default {
-    a {
-        font-size: 16px;
-        color: red;
-    }
-    background-color: #205081;
-}
-
-.navbar-nav li a:hover {
-    padding-top: 5px;
-    transition: padding-top 1s;
-}
-
-.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    margin-left: 15px;
-    margin-top: 15px;
-}
-
-
-.site-content {
-    padding-top: @navbar-height;
-}
 
 .navbar {
+    margin-bottom: 0;
     border: none;
-    .container-fluid {
-        padding: 0px;
-    }
+    height: @navbar-height;
+    background-color: #205081;
     .navbar-header {
         display: inline-block;
+        .navbar-brand {
+            font-size: 25px;
+            img {
+                width: 100px;
+            }
+        }
+    }
+    .navbar-nav {
+        background-color: #ff4c4c;
+        li {
+            a {
+                background-color: green;
+                font-size: 16px;
+                &:hover {
+
+                }
+            }
+        }
     }
 }
 
-#iris-navbar {
-    .nav {
-        margin-right: 0px;
+@media (min-width: 1199px) {
+    .navbar-right {
+        margin-right: 0;
     }
+    .navbar-nav {
+        li {
+            a {
+                font-size: 16px;
+                &:hover {
+                    padding-top: 5px;
+                    transition: padding-top 1s;
+                }
+            }
+        }
+    }
+
 }
+
+
 .search {
     background-color: #000;
     cursor: pointer;
@@ -56,20 +58,7 @@
         font-size: 28px;
         line-height: @navbar-height;
     }
-
 }
-
-.navbar-brand {
-    margin-left: 15px;
-    padding: 0;
-    font-size: 20px;
-    img {
-        height: 70px;
-
-    }
-}
-
-
 
 .search-wrapper {
 	position: absolute;
@@ -97,13 +86,6 @@
 }
 
 
-@media (min-width: 992px) {
-    .navbar-right .dropdown-menu {
-        right: auto;
-    }
-}
-
-
 //welcome section
 .banner {
     height: @welcome-height;
@@ -112,14 +94,21 @@
     color: #fff;
     position: relative;
     .shadow {
-        background-color: hsla(0,0,1%,0.3);
-    }
-    .welcome-message {
-
+        opacity: 0.3;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        min-width: 40%;
+        min-height: 50%;
+    }
+    .welcome-message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 40%;
+        min-height: 50%;
         padding: 20px;
         text-align: center;
         h1 {
@@ -128,7 +117,7 @@
             font-weight: 900;
         }
         a {
-            margin-top: 80px;
+            margin-top: 10%;
             border: 1px solid #fff;
             border-radius: 0px;
             background-color: transparent;
@@ -154,25 +143,36 @@
     img {
         display: block;
         margin: 20px auto;
+        width: 150px;
+        height: 150px;
     }
     h1 {
         text-align: center;
     }
     .subtitle {
         width: 70%;
-        margin: 30px auto;
+        margin: 0 auto;
         text-align: center;
         line-height: 30px;
+        font-size: 20px;
     }
     .featured-item {
         text-align: center;
         padding: 20px;
         min-height: 280px;
+        &:hover {
+            .fa-circle {
+                color: midnightblue;
+            }
+        }
         .fa-circle {
             color: #E64A19;
             border-radius: 90px;
             border: 1px solid #fff;
             box-shadow: 0px 0px 20px #888;
+            &:hover {
+                color: transparent;
+            }
         }
         .fa-black-circle {
             color: #000000;
@@ -187,7 +187,10 @@
 }
 
 .portfolio {
-.col-sm-3 { padding: 0; }
+
+    .col-sm-3 {
+        padding: 0;
+    }
 
 /* ---- button ---- */
 //
@@ -196,13 +199,12 @@
   padding: 0.5em 1.0em;
   font-family: sans-serif;
   font-size: 16px;
-  text-shadow: 0 1px white;
+  //text-shadow: 0 1px white;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #E64A19;
-
+  background-color: #000;
   color: #fff;
 }
 
@@ -214,8 +216,6 @@
   color: #E64A19;
 }
 
-.button:active {
-}
 
 /* ---- button-group ---- */
 
@@ -258,7 +258,6 @@
         display:none;
         a {
             color: #000;
-            margin-left: 15px;
             .fa {
                 font-size: 40px;
                 color: #fff;
@@ -314,11 +313,10 @@ img:hover {
     text-align: center;
 }
 .title {
-    font-size: 32px;
+    font-size: 36px;
 }
 .subtitle {
     font-size: 20px;
-    font-style: italic;
 }
 
 }

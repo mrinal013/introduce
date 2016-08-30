@@ -11,13 +11,17 @@ $section_background_image = $general_data['section_background_image'];
 
 $banner_data  = get_post_meta( $section, "banner_settings", true );
 
+
 if( is_array( $banner_data ) || is_object( $banner_data ) ) :
+    $banner_shadow = $banner_data['banner_shadow'];
     $button_setting = $banner_data['button_setting'];
 endif;
 ?>
 <section id="<?php echo $section_id; ?>" class="banner jumbotron" style="background-image: url('<?php echo $section_background_image; ?>')">
     <div class="container" >
-        <div class="welcome-message shadow">
+        <div class="shadow" style="background-color: <?php echo $banner_shadow; ?>">
+        </div>
+        <div class="welcome-message">
             <h1><?php echo $title; ?></h1>
             <p><?php echo $subtitle; ?></p>
             <?php

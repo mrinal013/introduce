@@ -1,10 +1,14 @@
 <?php
 $section = get_the_ID();
-
 $permalink = get_post_permalink($section);
 $section_id = basename($permalink);
-//echo $section;
+
 $general_data = get_post_meta( $section, "common_settings", true );
+$title = $general_data['title'];
+$subtitle = $general_data['subtitle'];
+$section_background_image = $general_data['section_background_image'];
+$section_background_color = $general_data['section_background_color'];
+
 $portfolio_data  = get_post_meta( $section, "portfolio_settings", true );
 
 $types = array();
@@ -27,11 +31,11 @@ if( $portfolies->have_posts() ) :
 endif;
 ?>
 
-<section id="<?php echo $section_id; ?>" class="portfolio">
-    <p class="title">Our work</p>
-    <p class="subtitle">We love our works</p>
+<section id="<?php echo $section_id; ?>" class="portfolio" style="background-image: url(<?php echo $section_background_image; ?>); background-color: <?php echo $section_background_color; ?>">
+    <p class="title"><?php echo $title; ?></p>
+    <p class="subtitle"><?php echo $subtitle; ?></p>
     <div id="filters" class="button-group">
-        <button class="button is-checked" data-filter="*">show all</button>
+        <button class="button is-checked" data-filter="*">All</button>
         <?php
         foreach( $types as $type ) { ?>
             <button class="button" data-filter=".<?php echo $type; ?>"><?php echo $type; ?></button>
@@ -56,9 +60,6 @@ endif;
                     <div class="image">
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="Blog Post" />
                         <div class="overlay">
-                            <a href="#" title="link for this project">
-                                <i class="fa fa-link"></i>
-                            </a>
                             <a class="colorbox" href="<?php the_post_thumbnail_url(); ?>">
                                 <i class="fa fa-plus-circle"></i>
                             </a>

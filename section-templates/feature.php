@@ -16,7 +16,7 @@ $features = $feature_data['feature_items'];
 <section id="<?php echo $section_id; ?>" class="feature" style="background-image: url(<?php echo $section_background_image; ?>); background-color: <?php echo $section_background_color; ?> ">
     <div class="container-fluid">
         <img src="<?php echo $feature_logo; ?>" alt="feature-logo" class="img-circle" />
-        <h1><?php echo $title; ?></h1><hr/>
+        <h1><?php echo $title; ?></h1>
         <p class="subtitle"><?php echo $subtitle; ?></p>
         <div class="row">
             <?php
