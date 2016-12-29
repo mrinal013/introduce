@@ -10,7 +10,7 @@ function theme_slug_register_required_plugins() {
       array(
         "name"=>"Introduce Custom Post Types & Metaboxes",
         "slug"=>"introduce-cpt",
-        "external_url"=>"https://github.com/mrinal013/introduce-cpt"
+        "source"=>"http://github.com/mrinal013/introduce-cpt/zipball/master",
       ),
       //from WordPress plugins repo
       array(
